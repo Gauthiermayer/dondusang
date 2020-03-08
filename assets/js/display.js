@@ -59,8 +59,8 @@ function createCard(infos) {
         let lieu = $('<h6 class="card-subtitle mb-2 text-muted">' + infos.properties.name + '</h6>');
         card_body.append(lieu);
         let date_date = new Date(infos.properties.start.split('CET')[0]);
-
-        let jour = (date_date.getDay() + 1) + "";
+        console.log(date_date.getDate())
+        let jour = date_date.getDate() + "";
         if (jour.length == 1) jour = "0" + jour;
 
         let mois = (date_date.getMonth() + 1) + "";
